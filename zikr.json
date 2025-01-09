@@ -130,7 +130,7 @@
     "ZikrInArabic": "أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",
     "HadithNumber": null,
     "QuranReference": "13:28"
-  }
+  },
 
   {
     "ZikrInEnglish": "Say, 'O Allah, Owner of the Kingdom, You give the Kingdom to whom You will and You take the Kingdom from whom You will'",
@@ -263,7 +263,7 @@
     "ZikrInArabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا",
     "HadithNumber": null,
     "QuranReference": null
-  }
+  },
   
   {
     "ZikrInEnglish": "Indeed, Allah is the Light of the heavens and the earth",
@@ -415,4 +415,4 @@
     "HadithNumber": null,
     "QuranReference": null
   }
-  
+]
