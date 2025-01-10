@@ -4,56 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zikr App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .zikr-container {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      width: 80%;
-      max-width: 600px;
-    }
-    h1 {
-      color: #4CAF50;
-    }
-    .zikr {
-      font-size: 1.5em;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    .arabic {
-      font-size: 2em;
-      margin-top: 10px;
-      color: #1E90FF;
-    }
-    .button-container {
-      margin-top: 20px;
-    }
-    button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -66,35 +17,6 @@
   </div>
 </div>
 
-<script>
-  let zikrData = [];
-  
-  // Fetch the Zikr data from your GitHub hosted JSON file
-  fetch('https://abdulnaufalpv.github.io/Islamic-API/zikr.json')
-    .then(response => response.json())
-    .then(data => {
-      zikrData = data;
-      generateZikr(); // Automatically generate the first Zikr after data is loaded
-    })
-    .catch(error => {
-      console.error("Failed to load Zikr data:", error);
-      document.getElementById('zikrText').innerText = "Failed to load Zikr data. Please try again later.";
-    });
-
-  // Function to display a random Zikr from the fetched data
-  function generateZikr() {
-    if (zikrData.length === 0) {
-      document.getElementById('zikrText').innerText = "Loading Zikr data...";
-      return;
-    }
-
-    const randomIndex = Math.floor(Math.random() * zikrData.length);
-    const zikr = zikrData[randomIndex];
-    
-    document.getElementById('zikrText').innerText = zikr.ZikrInEnglish || 'No Zikr found';
-    document.getElementById('zikrArabic').innerText = zikr.ZikrInArabic || 'No Zikr found';
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
