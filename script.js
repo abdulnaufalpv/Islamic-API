@@ -1,7 +1,7 @@
 let zikrData = [];
 
 // Fetch the Zikr data from your GitHub hosted JSON file
-fetch('https://abdulnaufalpv.github.io/Islamic-API/zikr.json')
+fetch('https://abdulnaufalpv.github.io/Zikr-Generator/zikr.json')
   .then(response => response.json())
   .then(data => {
     zikrData = data;
